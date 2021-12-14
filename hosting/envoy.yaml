@@ -21,6 +21,10 @@ static_resources:
                   cluster: app-service
                   prefix_rewrite: "/"
 
+              - match: { prefix: "/assets" }
+                route:
+                  cluster: dxdata
+
               - match: { path: "/v1/update" }
                 route:
                   cluster: watchtower-service
@@ -122,6 +126,7 @@ static_resources:
                 address: worker-service
                 port_value: 4003
 
+
   - name: couchdb-service
     connect_timeout: 0.25s
     type: strict_dns
@@ -150,3 +155,17 @@ static_resources:
                 address: watchtower-service
                 port_value: 8080
 
+
+  - name: dxdata
+    connect_timeout: 0.25s
+    type: strict_dns
+    lb_policy: round_robin
+    load_assignment:
+      cluster_name: dxdata
+      endpoints:
+        - lb_endpoints:
+            - endpoint:
+                address:
+                  socket_address:
+                    address: dxdata
+                    port_value: 7654

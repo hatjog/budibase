@@ -1,0 +1,159 @@
+{
+  "$id": "1",
+  "parmInventSumList": [
+    {
+      "$id": "2",
+      "AvailQty": 56,
+      "PhyscialInvent": 55,
+      "ReservPhysical": 1,
+      "LastUpdateDate": "2021-06-18T12:00:00",
+      "InventLocationId": "025-MAIN_W",
+      "ItemId": "A000001",
+      "CompanyId": "2001",
+      "InventSiteId": "CM025"
+    },
+    {
+      "$id": "3",
+      "AvailQty": 0,
+      "PhyscialInvent": 0,
+      "ReservPhysical": 0,
+      "LastUpdateDate": "2021-05-21T12:00:00",
+      "InventLocationId": "025-MAIN",
+      "ItemId": "A002839",
+      "CompanyId": "2001",
+      "InventSiteId": "CM025"
+    },
+    {
+      "$id": "4",
+      "AvailQty": 0,
+      "PhyscialInvent": 0,
+      "ReservPhysical": 0,
+      "LastUpdateDate": "2021-06-01T12:00:00",
+      "InventLocationId": "025-MAIN_W",
+      "ItemId": "A002839",
+      "CompanyId": "2001",
+      "InventSiteId": "CM025"
+    },
+    {
+      "$id": "5",
+      "AvailQty": 0,
+      "PhyscialInvent": 0,
+      "ReservPhysical": 0,
+      "LastUpdateDate": "2021-05-26T12:00:00",
+      "InventLocationId": "025-MAIN_W",
+      "ItemId": "A002840",
+      "CompanyId": "2001",
+      "InventSiteId": "CM025"
+    },
+    {
+      "$id": "6",
+      "AvailQty": 1,
+      "PhyscialInvent": 1,
+      "ReservPhysical": 0,
+      "LastUpdateDate": "2021-05-12T12:00:00",
+      "InventLocationId": "025-MAIN_W",
+      "ItemId": "A002844",
+      "CompanyId": "2001",
+      "InventSiteId": "CM025"
+    },
+    {
+      "$id": "7",
+      "AvailQty": 0,
+      "PhyscialInvent": 0,
+      "ReservPhysical": 0,
+      "LastUpdateDate": "2021-06-16T12:00:00",
+      "InventLocationId": "002-GŁÓWNY",
+      "ItemId": "A002846",
+      "CompanyId": "2001",
+      "InventSiteId": "CM002"
+    },
+    {
+      "$id": "8",
+      "AvailQty": 1,
+      "PhyscialInvent": 0,
+      "ReservPhysical": 1,
+      "LastUpdateDate": "2021-06-17T12:00:00",
+      "InventLocationId": "025-MAIN_W",
+      "ItemId": "A002846",
+      "CompanyId": "2001",
+      "InventSiteId": "CM025"
+    },
+    {
+      "$id": "9",
+      "AvailQty": 1,
+      "PhyscialInvent": 1,
+      "ReservPhysical": 0,
+      "LastUpdateDate": "2021-05-26T12:00:00",
+      "InventLocationId": "025-MAIN_W",
+      "ItemId": "A002847",
+      "CompanyId": "2001",
+      "InventSiteId": "CM025"
+    },
+    {
+      "$id": "10",
+      "AvailQty": 1,
+      "PhyscialInvent": 1,
+      "ReservPhysical": 0,
+      "LastUpdateDate": "2021-05-26T12:00:00",
+      "InventLocationId": "025-MAIN_W",
+      "ItemId": "A002848",
+      "CompanyId": "2001",
+      "InventSiteId": "CM025"
+    },
+    {
+      "$id": "11",
+      "AvailQty": 0,
+      "PhyscialInvent": 0,
+      "ReservPhysical": 0,
+      "LastUpdateDate": "2021-06-01T12:00:00",
+      "InventLocationId": "025-MAIN_W",
+      "ItemId": "A002849",
+      "CompanyId": "2001",
+      "InventSiteId": "CM025"
+    },
+    {
+      "$id": "12",
+      "AvailQty": 1,
+      "PhyscialInvent": 1,
+      "ReservPhysical": 0,
+      "LastUpdateDate": "2021-05-26T12:00:00",
+      "InventLocationId": "025-MAIN_W",
+      "ItemId": "A002850",
+      "CompanyId": "2001",
+      "InventSiteId": "CM025"
+    },
+    {
+      "$id": "13",
+      "AvailQty": 5,
+      "PhyscialInvent": 5,
+      "ReservPhysical": 0,
+      "LastUpdateDate": "2021-06-15T12:00:00",
+      "InventLocationId": "025-MAIN_W",
+      "ItemId": "A002890",
+      "CompanyId": "2001",
+      "InventSiteId": "CM025"
+    },
+    {
+      "$id": "14",
+      "AvailQty": 0,
+      "PhyscialInvent": 0,
+      "ReservPhysical": 0,
+      "LastUpdateDate": "2021-06-08T12:00:00",
+      "InventLocationId": "025-MAIN",
+      "ItemId": "WMS1",
+      "CompanyId": "2001",
+      "InventSiteId": "CM025"
+    },
+    {
+      "$id": "15",
+      "AvailQty": 11,
+      "PhyscialInvent": 11,
+      "ReservPhysical": 0,
+      "LastUpdateDate": "2021-06-15T12:00:00",
+      "InventLocationId": "025-MAIN_W",
+      "ItemId": "WMS1",
+      "CompanyId": "2001",
+      "InventSiteId": "CM025"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+version: "3.8"
+
+# For testing dxdata docker build
+
+services:
+  dxdatalocal:
+    restart: always
+    build: ../dxdata
+    container_name: dxdatalocal
+    ports:
+      - "7655:7654"
+    command: uvicorn app.main:app --reload --workers 1 --host 0.0.0.0 --port 7654
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://postgres:admin@host.docker.internal:5432/mbb
+    volumes:
+      - ./assets:/assets
+      - ../dxdata:/usr/src/app

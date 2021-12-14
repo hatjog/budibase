@@ -67,11 +67,15 @@ services:
       - minio_data:/data
     ports:
       - "${MINIO_PORT}:9000"
+      - "${MINIO_CONSOLE_PORT}:9001"
     environment:
       MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY}
       MINIO_SECRET_KEY: ${MINIO_SECRET_KEY}
-      MINIO_BROWSER: "off"
-    command: server /data
+      MINIO_ROOT_USER: ${MINIO_ACCESS_KEY}
+      MINIO_ROOT_PASSWORD: ${MINIO_SECRET_KEY}
+      MINIO_BROWSER_REDIRECT_URL=http://127.0.0.1:${MINIO_CONSOLE_PORT}
+      MINIO_BROWSER: "on"
+    command: server --console-address ":9001" /data
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
       interval: 30s
@@ -132,6 +136,19 @@ services:
       - WATCHTOWER_CLEANUP=true
     labels:
       - "com.centurylinklabs.watchtower.enable=false"
+
+  dxdata:
+    restart: always
+    build: ../packages/dxdata
+    container_name: dxdata
+    ports:
+      - "${DXDATA_PORT}:7654"
+    command: uvicorn app.main:app --reload --workers 1 --host 0.0.0.0 --port 7654
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://postgres:admin@host.docker.internal:5432/mbb
+    volumes:
+      - ../packages/dxdata/assets:/assets
+      - ../packages/dxdata:/usr/src/app
 
 
 volumes:
