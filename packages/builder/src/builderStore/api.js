@@ -6,6 +6,7 @@ const apiCall =
   method =>
   async (url, body, headers = { "Content-Type": "application/json" }) => {
     headers["x-budibase-app-id"] = svelteGet(store).appId
+    headers["x-budibase-api-version"] = "1"
     const json = headers["Content-Type"] === "application/json"
     const resp = await fetch(url, {
       method: method,
@@ -13,6 +14,9 @@ const apiCall =
       headers,
     })
     if (resp.status === 403) {
+      if (url.includes("/api/templates")) {
+        return { json: () => [] }
+      }
       removeCookie(Cookies.Auth)
       // reload after removing cookie, go to login
       if (!url.includes("self") && !url.includes("login")) {
