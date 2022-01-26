@@ -38,6 +38,7 @@ module.exports = {
   MINIO_ACCESS_KEY: process.env.MINIO_ACCESS_KEY,
   MINIO_SECRET_KEY: process.env.MINIO_SECRET_KEY,
   USE_QUOTAS: process.env.USE_QUOTAS,
+  EXCLUDE_QUOTAS_TENANTS: process.env.EXCLUDE_QUOTAS_TENANTS,
   REDIS_URL: process.env.REDIS_URL,
   REDIS_PASSWORD: process.env.REDIS_PASSWORD,
   INTERNAL_API_KEY: process.env.INTERNAL_API_KEY,
@@ -65,6 +66,7 @@ module.exports = {
   DEPLOYMENT_CREDENTIALS_URL: process.env.DEPLOYMENT_CREDENTIALS_URL,
   ALLOW_DEV_AUTOMATIONS: process.env.ALLOW_DEV_AUTOMATIONS,
   DISABLE_THREADING: process.env.DISABLE_THREADING,
+  QUERY_THREAD_TIMEOUT: process.env.QUERY_THREAD_TIMEOUT,
   _set(key, value) {
     process.env[key] = value
     module.exports[key] = value
